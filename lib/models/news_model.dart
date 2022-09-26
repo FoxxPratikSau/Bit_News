@@ -1,35 +1,41 @@
-import 'package:news_app_with_api/models/source_model.dart';
+//Now let's create the article model
+// for that we just need to copy the property from the json structure
+// and make a dart object
 
-class News {
-  late Source source;
-  late String author;
-  late String title;
-  late String description;
-  late String url;
-  late String urlToImage;
-  late String publishedAt;
-  late String content;
+import 'source_model.dart';
 
-  //constructor
-  News(
-      {required this.source,
-      required this.author,
-      required this.title,
-      required this.description,
-      required this.url,
-      required this.urlToImage,
-      required this.publishedAt,
-      required this.content});
+class Article {
+  Source? source;
+  String? author;
+  String? title;
+  String? description;
+  String? url;
+  String? urlToImage;
+  String? publishedAt;
+  String? content;
 
-  factory News.fromJson(Map<String, dynamic> json) {
-    return News(
-        source: Source.fromJson(json['source']),
-        author: json['author'] as String,
-        title: json['title'] as String,
-        description: json['description'] as String,
-        url: json['url'] as String,
-        urlToImage: json['urlToImage'] as String,
-        publishedAt: json['publishedAt'] as String,
-        content: json['content'] as String);
+  //Now let's create the constructor
+  Article(
+      {this.source,
+      this.author,
+      this.title,
+      this.description,
+      this.url,
+      this.urlToImage,
+      this.publishedAt,
+      this.content});
+
+  //And now let's create the function that will map the json into a list
+  factory Article.fromJson(Map<String, dynamic> json) {
+    return Article(
+      source: Source?.fromJson(json['source']),
+      author: json['author'] as String?,
+      title: json['title'] as String?,
+      description: json['description'] as String?,
+      url: json['url'] as String?,
+      urlToImage: json['urlToImage'] as String?,
+      publishedAt: json['publishedAt'] as String?,
+      content: json['content'] as String?,
+    );
   }
 }
