@@ -12,10 +12,10 @@ import '../models/news_model.dart';
   //   return http.get(endPointUrl);
   // }
   final endPointUrl = Uri.parse(
-      'https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&apiKey=5a7b4284754841ac85f1c3407d5f811b');
+      'https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&apiKey=##');
   Future<List<Article>> getArticle() async {
      final response = await http
-      .get(Uri.parse('https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&apiKey=5a7b4284754841ac85f1c3407d5f811b'));
+      .get(Uri.parse('https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&apiKey=##'));
 
     if (response.statusCode == 200) {
       Map<String, dynamic> json = jsonDecode(response.body);
