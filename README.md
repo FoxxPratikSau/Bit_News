@@ -1,16 +1,13 @@
-# news_app_with_api
+# bit_news
 
-A new Flutter project.
+## Features:
 
-## Getting Started
+1. fully operational till now
+2. fetches data from NewsApi and shows the content
+3. added a read more button to launch URL using the URL launcher package
 
-This project is a starting point for a Flutter application.
+## TODO:
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+1. Need to Improve URL
+2. Thinking About Adding a top navigation bar depending on the news category 
+3. Thinking of adding authentication and Save Article Features! (I May need some help)
