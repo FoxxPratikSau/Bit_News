@@ -1,12 +1,13 @@
-# bit_news
+# Bits_News
 
-## Features:
+
+# Features:
 
 1. fully operational till now
 2. fetches data from NewsApi and shows the content
 3. added a read more button to launch URL using the URL launcher package
 
-## TODO:
+# TODO:
 
 1. Need to Improve URL
 2. Thinking About Adding a top navigation bar depending on the news category 
