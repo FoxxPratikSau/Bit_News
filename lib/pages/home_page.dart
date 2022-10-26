@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:news_app_with_api/widgets/TechWidget.dart';
+import 'package:news_app_with_api/widgets/TeslaWidget.dart';
 
 import '../components/customListTile.dart';
 import '../models/news_model.dart';
@@ -54,7 +55,8 @@ class _HomePageState extends State<HomePage> {
                       alignment: Alignment.center,
                       child: Text("Technology",
                           style: TextStyle(
-                              fontFamily: GoogleFonts.poppins().fontFamily,fontSize: 13)),
+                              fontFamily: GoogleFonts.poppins().fontFamily,
+                              fontSize: 13)),
                     ),
                   ),
                   Tab(
@@ -62,7 +64,8 @@ class _HomePageState extends State<HomePage> {
                       alignment: Alignment.center,
                       child: Text("Tesla",
                           style: TextStyle(
-                              fontFamily: GoogleFonts.poppins().fontFamily,)),
+                            fontFamily: GoogleFonts.poppins().fontFamily,
+                          )),
                     ),
                   ),
                   Tab(
@@ -85,8 +88,9 @@ class _HomePageState extends State<HomePage> {
           ),
           body: TabBarView(children: [
             TechNews(),
-            Text("0"),
+            TeslaNews(),
             Text("1"),
+            Text('data'),
           ]),
         ),
       ),

@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:news_app_with_api/pages/tesla_detail_page.dart';
+import 'package:news_app_with_api/tesla%20model/tesla_model.dart';
 
 import '../models/news_model.dart';
 import '../pages/article_detail_page.dart';
 
-Widget customListTile(Article article, BuildContext context) {
+Widget customListTileTesla(Tesla article, BuildContext context) {
   return InkWell(
     onTap: () {
       Navigator.push(
           context,
           MaterialPageRoute(
-              builder: (context) => ArticlePage(
+              builder: (context) => TeslaPage(
                     article: article,
                   )));
     },
