@@ -55,7 +55,7 @@ Widget customListTileTesla(Tesla article, BuildContext context) {
             ),
             child: Text(
               article.source!.name.toString(),
-              style:  TextStyle(
+              style: TextStyle(
                 color: Colors.black,
                 fontFamily: GoogleFonts.poppins().fontFamily,
               ),

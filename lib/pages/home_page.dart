@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:news_app_with_api/widgets/BusinessWidget.dart';
+import 'package:news_app_with_api/widgets/Entertainment.dart';
+import 'package:news_app_with_api/widgets/ScienceWidget.dart';
 import 'package:news_app_with_api/widgets/TechWidget.dart';
-import 'package:news_app_with_api/widgets/TeslaWidget.dart';
 
 import '../components/customListTile.dart';
 import '../models/news_model.dart';
@@ -23,12 +25,28 @@ class _HomePageState extends State<HomePage> {
         length: 4,
         child: Scaffold(
           appBar: AppBar(
-            title: const Text(
-              "NewsAPI",
-              style: TextStyle(color: Colors.black),
+            centerTitle: true,
+            title: Row(
+              children: [
+                Text(
+                  "Bit",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontFamily: GoogleFonts.poppins().fontFamily,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 25.5),
+                ),
+                Text(
+                  "NEWS",
+                  style: TextStyle(
+                      color: Colors.purple,
+                      fontFamily: GoogleFonts.poppins().fontFamily,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 25.5),
+                )
+              ],
             ),
             backgroundColor: Colors.white,
-            centerTitle: true,
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(20.0),
@@ -38,9 +56,10 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             bottom: TabBar(
+                isScrollable: true,
                 labelColor: Colors.white,
                 unselectedLabelColor: Colors.black,
-                indicatorSize: TabBarIndicatorSize.label,
+                indicatorSize: TabBarIndicatorSize.tab,
                 indicator: const BoxDecoration(
                     borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(20),
@@ -62,7 +81,7 @@ class _HomePageState extends State<HomePage> {
                   Tab(
                     child: Align(
                       alignment: Alignment.center,
-                      child: Text("Tesla",
+                      child: Text("Science",
                           style: TextStyle(
                             fontFamily: GoogleFonts.poppins().fontFamily,
                           )),
@@ -79,7 +98,7 @@ class _HomePageState extends State<HomePage> {
                   Tab(
                     child: Align(
                       alignment: Alignment.center,
-                      child: Text("Apple",
+                      child: Text("Entertainment",
                           style: TextStyle(
                               fontFamily: GoogleFonts.poppins().fontFamily)),
                     ),
@@ -88,9 +107,9 @@ class _HomePageState extends State<HomePage> {
           ),
           body: TabBarView(children: [
             TechNews(),
-            TeslaNews(),
-            Text("1"),
-            Text('data'),
+            ScNews(),
+            BusinessNews(),
+            EntertaimentNews(),
           ]),
         ),
       ),
