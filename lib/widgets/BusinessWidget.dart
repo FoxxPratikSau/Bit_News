@@ -5,19 +5,19 @@ import '../components/customListTile.dart';
 import '../models/news_model.dart';
 import '../services/api_serv.dart';
 
-class TechNews extends StatefulWidget {
-  const TechNews({super.key});
+class BusinessNews extends StatefulWidget {
+  const BusinessNews({super.key});
 
   @override
-  State<TechNews> createState() => _TechNewsState();
+  State<BusinessNews> createState() => _BusinessNewsState();
 }
 
-class _TechNewsState extends State<TechNews> {
+class _BusinessNewsState extends State<BusinessNews> {
     ApiServices client = ApiServices();
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-       future: client.getArticle("technology"),
+       future: client.getArticle("business"),
             builder: (BuildContext context, AsyncSnapshot<List<Article>> snapshot) {
               if (snapshot.hasData) {
                 List<Article>? articles = snapshot.data;
@@ -38,4 +38,4 @@ class _TechNewsState extends State<TechNews> {
 
 // FutureBuilder(
 //            
-//           ),
+//         Business

@@ -10,9 +10,9 @@ class ApiServices {
   // }
   final endPointUrl = Uri.parse(
       'https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&apiKey=5a7b4284754841ac85f1c3407d5f811b');
-  Future<List<Article>> getArticle() async {
+  Future<List<Article>> getArticle(String category) async {
     final response = await http.get(Uri.parse(
-        'https://newsapi.org/v2/everything?domains=techcrunch.com,thenextweb.com&apiKey=5a7b4284754841ac85f1c3407d5f811b'));
+        'https://newsapi.org/v2/top-headlines?category=$category&country=in&apiKey=5a7b4284754841ac85f1c3407d5f811b'));
 
     if (response.statusCode == 200) {
       Map<String, dynamic> json = jsonDecode(response.body);
