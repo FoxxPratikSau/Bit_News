@@ -18,11 +18,11 @@ Widget customListTile(Article article, BuildContext context) {
       margin: const EdgeInsets.all(12.0),
       padding: const EdgeInsets.all(8.0),
       decoration: BoxDecoration(
-          color: Color.fromARGB(0, 255, 255, 255),
+          color: Color.fromARGB(179, 255, 255, 255),
           borderRadius: BorderRadius.circular(12.0),
           boxShadow: const [
             BoxShadow(
-              color: Colors.purple,
+              color: Colors.purpleAccent,
               blurRadius: 33.0,
             ),
           ]),
@@ -53,8 +53,8 @@ Widget customListTile(Article article, BuildContext context) {
             ),
             child: Text(
               article.source!.name.toString(),
-              style:  TextStyle(
-                color: Colors.black,
+              style: TextStyle(
+                color: Colors.white,
                 fontFamily: GoogleFonts.poppins().fontFamily,
               ),
             ),
@@ -65,6 +65,7 @@ Widget customListTile(Article article, BuildContext context) {
           Text(
             article.title.toString(),
             style: TextStyle(
+              color: Colors.black,
               fontWeight: FontWeight.bold,
               fontFamily: GoogleFonts.poppins().fontFamily,
               fontSize: 16.0,
